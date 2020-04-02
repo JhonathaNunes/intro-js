@@ -4,7 +4,21 @@
  * @param {Array} vetor 
  * @return {Number} o menor valor.
  */
-function acharMenor(vetor) { }
+function acharMenor(vetor) {
+    if (vetor.length == 0) {
+        return undefined;
+    }
+
+    let smallestNum = vetor[0];
+
+    vetor.forEach((num) => {
+        if (num < smallestNum) {
+            smallestNum = num;
+        }
+    });
+
+    return smallestNum;
+}
 
 /**
  * Recebe um vetor de números e devolve um outro vetor apenas com os números pares deste vetor.
@@ -12,4 +26,18 @@ function acharMenor(vetor) { }
  * @param {Array} vetor com números inteiros.
  * @returns {Array} vetor contendo apenas números pares do original (ou vazio se não houver nenhum)
  */
-function acharPares(vetor) { }
+function acharPares(vetor) {
+    // if (vetor.length == 0) {
+    //     return [];
+    // }
+
+    // let numbers = vetor.filter((num) => {
+    //     if (num % 2 == 0) {
+    //         return num;
+    //     }
+    // });
+
+    // console.log(numbers);
+
+    // return numbers;
+}

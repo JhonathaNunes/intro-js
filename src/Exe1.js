@@ -19,7 +19,26 @@
  * @param {Number} numero2
  * @returns {Number} resultado da operação
  */
-function operacoesBasicas(operacao, numero1, numero2) { }
+function operacoesBasicas(operacao, numero1, numero2) {
+    switch (operacao) {
+        case "A":
+            return numero1 + numero2;
+        case "S":
+            return numero1 - numero2;
+        case "M":
+            return numero1 * numero2;
+        case "D":
+            if (numero2 === 0) {
+                return NaN;
+            } else  {
+                return numero1 / numero2;
+            }
+        case "P":
+            return numero1 ** numero2;
+        default:
+            return undefined;
+    }
+}
 
 /**
  * Escreva uma função que recebe dois elementos e retorna uma mensagem dizendo se eles são estritamente iguais,
@@ -33,4 +52,12 @@ function operacoesBasicas(operacao, numero1, numero2) { }
  * @param {*} elemento2
  * @returns {string} mensagem com o resultado da comparação 
  */
-function comparadorBasico(elemento1, elemento2) { }
+function comparadorBasico(elemento1, elemento2) {
+    if (elemento1 === elemento2) {
+        return `Elemento ${elemento1} (${typeof(elemento1)}) é estritamente igual ao elemento ${elemento2} (${typeof(elemento2)})`
+    } else if (elemento1 == elemento2) {
+        return `Elemento ${elemento1} (${typeof(elemento1)}) é equivalente ao elemento ${elemento2} (${typeof(elemento2)})`
+    } else {
+        return `Elemento ${elemento1} (${typeof(elemento1)}) é diferente do elemento ${elemento2} (${typeof(elemento2)})`
+    }
+}
